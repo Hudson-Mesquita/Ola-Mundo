@@ -1,5 +1,4 @@
 # Jogo simples de pedra/papel/tesoura sem interface gráfica
-from multiprocessing.connection import wait
 from random import choice
 from time import sleep
 print("-=-" * 15)
