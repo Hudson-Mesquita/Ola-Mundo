@@ -20,6 +20,7 @@ while cont <=5:
     print("\033[33mPapel...\033[m")
     sleep(1)
     print("\033[31mTESOURA!!!!\033[m")
+    print("=" * 40)
     ia = choice(lista)
     if jogador == 1:
         jognome = "Pedra"
@@ -35,20 +36,20 @@ while cont <=5:
         print(f"\033[32mPARABÉNS!!! Você ganhou o {cont}° Round\033[m")
         gan = gan + 1
     elif ia == jognome:
-        print(f"Computador escolheu \033[31m{ia}\033[m] e Jogador escolheu \033[34m{jognome}\033[m, \033[32mEMPATE!!!\033[m")
-        print("Haverá um round extra por não ser permissivo empates")
+        print(f"Computador escolheu \033[31m{ia}\033[m e Jogador escolheu \033[34m{jognome}\033[m, \033[33mEMPATE!!!\033[m")
+        print("Haverá um round extra por não ser permissivo empates.")
         cont = cont - 1
     else:
         print(f"Computador escolheu \033[31m{ia}\033[m e Jogador escolheu \033[31m{jognome}\033[m")
         print(f"Que pena, \033[31mVocê perdeu o {cont}° Round\033[m")
         per = per + 1
     cont = cont + 1
-    if cont < 5:
+    if cont <= 5:
         print("Vamos para o próximo Round!")
         print("=" * 40)
 print(f"Você ganhou {gan} partidas e o Computador ganhou {per} partidas")
 if gan > per:
-    print("\033[34mVITÓRIA!!!!\033[m")
+    print("=-=" * 5,"\033[34mVITÓRIA!!!!\033[m", "=-=" * 5)
 else:
     print("\033[31mDERROTA\033[m")
 print("Obrigado por jogar.")
